@@ -45,7 +45,10 @@ react/
 │   ├── pages/
 │   │   ├── EntryPage.tsx     OAuth authorization and OIDC flow
 │   │   ├── IndexPage.tsx     User profile display and deferred location permissions
-│   │   └── CheckoutPage.tsx  Payment flow and checkout permission handling
+│   │   ├── CheckoutPage.tsx  Payment flow and checkout permission handling
+│   │   └── AgentPage.tsx     Scripted shopping assistant using AgentToolkit
+│   ├── utils/
+│   │   └── mockBridge.ts     Demo-only native bridge mock for desktop browsers
 │   ├── services/
 │   │   └── grabidService.ts  Demo-only OIDC helpers
 │   └── context/
@@ -55,10 +58,15 @@ react/
 
 Install and run:
 ```bash
-cd react
+# The React demo uses this repo's SDK build, so build it first (from the repo root)
+npm run build:dist
+
+cd demo/react
 npm install
 npm run dev
 ```
+
+The shopping assistant at `/agent` works in a desktop browser: when it is not running in the Grab app, it turns on a mock bridge that simulates the rewards, scope and checkout responses.
 
 ## Configure
 

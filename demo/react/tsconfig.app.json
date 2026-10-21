@@ -19,7 +19,12 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* Type-check against this repo's SDK build (run `npm run build:dist` in the repo root first) */
+    "paths": {
+      "@grabjs/superapp-sdk": ["../../dist/index.d.ts"]
+    }
   },
   "include": ["src"]
 }

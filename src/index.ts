@@ -5,6 +5,19 @@
  * directory of this source tree.
  */
 
+export {
+  AgentCheckoutSummary,
+  AgentEstimateRewardsResponse,
+  AgentEstimateRewardsResult,
+  AgentRewardsTotal,
+  AgentToolCallEvent,
+  AgentToolDefinition,
+  AgentToolkit,
+  AgentToolkitOptions,
+  AgentToolName,
+  AgentToolResponse,
+  AgentTriggerCheckoutResponse,
+} from './agent';
 export type {
   ModuleInvokeOptions,
   SDKClientErrorStatusCode,

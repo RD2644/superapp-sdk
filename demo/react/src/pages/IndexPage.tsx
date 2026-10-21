@@ -116,6 +116,10 @@ export default function IndexPage() {
     navigate('/checkout');
   }
 
+  function handleAgent() {
+    navigate('/agent');
+  }
+
   return (
     <div className="p-4">
       <WarningArea warning={warning} />
@@ -145,6 +149,12 @@ export default function IndexPage() {
               className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
             >
               Go to Checkout
+            </button>
+            <button
+              onClick={handleAgent}
+              className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Try the Shopping Assistant
             </button>
           </div>
           {actionResult && (
