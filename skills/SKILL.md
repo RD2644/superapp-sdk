@@ -22,6 +22,7 @@ Use this SDK to call native Grab SuperApp features from a MiniApp running in the
 
 | Module | Purpose | Reference file |
 | :--- | :--- | :--- |
+| `AgentToolkit` | Exposes SDK capabilities as tools that an in-app AI assistant can call. | `references/modules/AgentToolkit.md` |
 | `CameraModule` | SDK module for accessing the device camera via `JSBridge`. | `references/modules/CameraModule.md` |
 | `CheckoutModule` | SDK module for triggering native payment flows via `JSBridge`. | `references/modules/CheckoutModule.md` |
 | `ContainerModule` | SDK module for controlling the WebView container via `JSBridge`. | `references/modules/ContainerModule.md` |

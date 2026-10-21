@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Each release entry may include a short summary (Markdown, for example `_italic_`) between the version heading and the first `###` section;
 
+## [2.0.0-beta.66] - 2026-10-21
+
+_Adds `AgentToolkit` so in-app AI assistants can estimate rewards and check out with user confirmation._
+
+### Added
+
+- `AgentToolkit` exposes `estimate_rewards` and `trigger_checkout` as tools with JSON Schemas for LLM tool calling. Tool arguments are validated (positive safe-integer minor units, upper-case ISO 4217 currency, no extra fields) and invalid calls return `400` with a reason the model can act on.
+- `trigger_checkout` checks the `mobile.checkout` permission, then requires your `confirmCheckout` callback to approve before your `prepareCheckout` callback creates the transaction. A declined confirmation returns `204` and nothing is charged.
+- `onToolCall` telemetry hook with the tool name, status code and duration. Arguments and results are never included.
+
 ## [2.0.0-beta.65] - 2026-10-15
 
 _Recognises Android webviews whose user agent has no space before the version code._
