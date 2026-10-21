@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Each release entry may include a short summary (Markdown, for example `_italic_`) between the version heading and the first `###` section;
 
+## [2.0.0-beta.66] - 2026-10-21
+
+_Adds exponential backoff retries and structured telemetry hooks to `NetworkModule`._
+
+### Added
+
+- `NetworkModule` accepts `NetworkModuleOptions` with a default `retry` policy and an `onTelemetry` hook.
+- `NetworkModule.send()` accepts `SendOptions` to override the retry policy or set the telemetry `requestId` per request.
+- Telemetry events `attempt_start`, `attempt_end` and `request_end` report status code, duration, retry delay and whether retries were exhausted. Headers, body and query string are never included.
+
+### Changed
+
+- `NetworkModule.send()` now retries `5xx` responses (except `501`) and `JSBridge` failures with exponential backoff and full jitter, up to 3 attempts, for `GET`, `HEAD`, `OPTIONS`, `PUT` and `DELETE`. `POST` and `PATCH` are only retried when listed in `retryableMethods`. Pass `retry: false` to keep the previous single-attempt behaviour.
+- A request that still fails with a retryable error is now logged with `console.warn`, including the `requestId`.
+
 ## [2.0.0-beta.65] - 2026-10-15
 
 _Recognises Android webviews whose user agent has no space before the version code._

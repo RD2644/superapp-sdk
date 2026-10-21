@@ -6,4 +6,15 @@
  */
 
 export { NetworkModule } from './NetworkModule';
-export type { SendRequest, SendResponse, SendResult } from './types';
+export type {
+  NetworkModuleOptions,
+  NetworkRetryOptions,
+  NetworkTelemetryEvent,
+  NetworkTelemetryEventBase,
+  NetworkTelemetryHook,
+  SendMethod,
+  SendOptions,
+  SendRequest,
+  SendResponse,
+  SendResult,
+} from './types';
