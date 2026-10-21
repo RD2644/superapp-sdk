@@ -6,13 +6,13 @@ SDK module for making network requests through the native layer via `JSBridge`.
 
 | Method | Returns | Description |
 | :--- | :--- | :--- |
-| `send(request: SendRequest)` | `Promise<SendResponse>` | Sends a network request through `JSBridge`. |
+| `send(request: SendRequest, options?: SendOptions)` | `Promise<SendResponse>` | Sends a network request through `JSBridge`. |
 
 ## `send`
 
 Sends a network request through `JSBridge`.
 
-**Signature:** `send(request: SendRequest): Promise<SendResponse>`
+**Signature:** `send(request: SendRequest, options?: SendOptions): Promise<SendResponse>`
 
 The network response containing the result data or error information. See SendResponse.
 

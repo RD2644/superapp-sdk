@@ -121,7 +121,19 @@ export {
   PlayDRMContentResponse,
   PlayDRMContentResult,
 } from './modules/media';
-export { NetworkModule, SendRequest, SendResponse, SendResult } from './modules/network';
+export {
+  NetworkModule,
+  NetworkModuleOptions,
+  NetworkRetryOptions,
+  NetworkTelemetryEvent,
+  NetworkTelemetryEventBase,
+  NetworkTelemetryHook,
+  SendMethod,
+  SendOptions,
+  SendRequest,
+  SendResponse,
+  SendResult,
+} from './modules/network';
 export { BackResponse, PlatformModule } from './modules/platform';
 export {
   FetchEmailResponse,
